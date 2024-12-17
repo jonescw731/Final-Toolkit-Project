@@ -4,6 +4,12 @@
   <meta charset="UTF-8" />
   <title>Rosanna McNamara-Jones</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Reddit+Sans:ital,wght@0,200..900;1,200..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Bungee+Shade&family=Cherry+Cream+Soda&family=Enriqueta:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 
@@ -20,26 +26,53 @@
 
   <div class="nav-bar">
     <nav class="main-nav-bar">
-      <div class="nav-bar-elements nav-bar-elements-one">
-        <a href="index.html">Home</a>
-      </div>
-      <div class="nav-bar-elements nav-bar-elements-two">
-        <a href="/">About</a>
-      </div>
-      <div class="nav-bar-elements nav-bar-elements-three">
-        <a href="/">History</a>
-      </div>
-      <div class="nav-bar-elements nav-bar-elements-four">
-        <a href="/">Instruments</a>
-      </div>
-      <div class="nav-bar-elements nav-bar-elements-five">
-        <a href="/">The Music</a>
-      </div>
-      <div class="nav-bar-elements nav-bar-elements-last">
-        <a href="/">Venues</a>
+      <div class="nav-boxes">
+        <div class="nav-bar-elements nav-bar-elements-one">
+          <a href="index.html">Home</a>
+        </div>
+        <div class="nav-bar-elements nav-bar-elements-two">
+          <a href="about.html">About</a>
+        </div>
+        <div class="nav-bar-elements nav-bar-elements-three">
+          <a href="base.html">History</a>
+        </div>
+        <div class="nav-bar-elements nav-bar-elements-four">
+          <a href="base.html">Instruments</a>
+        </div>
+        <div class="nav-bar-elements nav-bar-elements-five">
+          <a href="base.html">The Music</a>
+        </div>
+        <div class="nav-bar-elements nav-bar-elements-last">
+          <a href="base.html">Venues</a>
+        </div>
       </div>
     </nav>
   </div>
+
+  <div class="pg-title">
+    <h1>Projects</h1>
+  </div>
+
+  <div class="main-body">
+    <div class="the-projects">
+        <div class="neil-nathan">
+            <a href="https://neilnathan.bandcamp.com/track/love-you-till-the-end">
+                <img class="love" src="https://f4.bcbits.com/img/a3431362394_16.jpg"></a>
+            <audio controls>
+                <source src="Love-You-Till-The-End.mp3" type="audio/mpeg">
+            </audio>
+            <p>Neil Nathan is a folk americana artist who consistently works with local Philly musicians. He features Rosie McNamara-Jones on several tracks. She worked closely with him to produce this single, "Love You 'Til the End," which came out July 2024 and features Rosie on the violin.</p>
+        </div>
+        <div class="the-hill">
+            <a href="https://soundsofthehill.com/tracks">
+                <img class="get-in-line" src="https://d10j3mvrs1suex.cloudfront.net/s:bzglfiles/u/756191/c569e2ed807397dae370a2617cd83f4abf453348/original/hp-image-1.png/!!/b%3AW1sicmVzaXplIiwxMDgwXSxbIm1heCJdLFsid2UiXV0%3D/meta%3AeyJzcmNCdWNrZXQiOiJiemdsZmlsZXMifQ%3D%3D.png"></a>
+            <audio controls>
+                <source src="The-Hill.mp3" type="audio/mpeg">
+            </audio>
+            <p>The Hill recruited a range of Philly musicians to help put together their debut album, featuring Rosie on violin. The album was released in April 2024.</p>
+        </div>
+    </div>
+</div>
 
 
 
@@ -54,6 +87,57 @@
 </html>
 
 <style>
+
+.the-projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items:baseline;
+    flex-wrap: wrap;
+    width: auto;
+    height: 750px;
+
+}
+
+.neil-nathan {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 550px;
+    height: auto;
+}
+
+.love {
+    height: 450px;
+    width: auto;
+}
+
+.the-hill {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 550px;
+    height: auto;
+}
+
+.get-in-line {
+    height: 450px;
+    width: auto;
+}
+
+.main-body {
+    height: 850px;
+    width: auto;
+}
+
+
+body {
+    margin: 0;
+    background-color: #FFFCE7;
+    height: 100vh;
+}
 
 .header-container {
     display: flex; 
@@ -99,6 +183,21 @@
 
   }
 
+  .site-title {
+    font-family: "Enriqueta", serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  p {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-left: 15px;
+  margin-right: 10px;
+  margin-top: 4px;
+}
+
 
 .nav-bar {
   display: flex;
@@ -118,19 +217,30 @@
   z-index: 99;
 }
 
+.nav-boxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  border-right: 1px solid;
+  border-left: 1px solid;
+  border-color:#867E8A;
+  flex-wrap: wrap;
+}
+
 .nav-bar-elements {
-  border-top: 7px;
-  border-left: 14px;
-  border-right: 14px;
-  border-bottom: 7px;
+ border-style: solid;
   border-color: #867E8A;
-  border: solid;
-  width: 80px;
+  width: 95px;
   height: 25px;
   text-align:justify; 
   text-align: center;
   position: sticky;
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: normal;
 }
+
 
 .nav-bar-elements-one {
   border-left: 21px;
@@ -144,5 +254,88 @@
   border-color:#867E8A;
 }
 
+.pg-title {
+    text-align: center;
+    margin: auto;
+}
+
+h1 {
+    font-family: "PT Serif", serif;
+    font-weight: 1200;
+    font-style: normal;
+}
+
+
+
+
+
+
+
+.pt-serif-regular {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pt-serif-bold {
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.pt-serif-regular-italic {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.pt-serif-bold-italic {
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.enriqueta-regular {
+  font-family: "Enriqueta", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.enriqueta-medium {
+  font-family: "Enriqueta", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.enriqueta-semibold {
+  font-family: "Enriqueta", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.enriqueta-bold {
+  font-family: "Enriqueta", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+@media (max-width: 452px) {
+    .love {
+        height: 325px;
+        width: auto;
+    }
+    .get-in-line {
+        height: 325px;
+        width: auto;
+    }
+    .site-title {
+        font-size: 1.5rem;
+    }
+    .title-content {
+        width: 250px;
+        height: auto;
+     }
+}
 
 </style>

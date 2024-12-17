@@ -4,6 +4,12 @@
   <meta charset="UTF-8" />
   <title>Rosanna McNamara-Jones</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Reddit+Sans:ital,wght@0,200..900;1,200..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Bungee+Shade&family=Cherry+Cream+Soda&family=Enriqueta:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -20,23 +26,25 @@
 
     <div class="nav-bar">
       <nav class="main-nav-bar">
-        <div class="nav-bar-elements nav-bar-elements-one">
-          <a href="/">Home</a>
-        </div>
-        <div class="nav-bar-elements nav-bar-elements-two">
-          <a href="/">About</a>
-        </div>
-        <div class="nav-bar-elements nav-bar-elements-three">
-          <a href="/">History</a>
-        </div>
-        <div class="nav-bar-elements nav-bar-elements-four">
-          <a href="/">Instruments</a>
-        </div>
-        <div class="nav-bar-elements nav-bar-elements-five">
-          <a href="/">The Music</a>
-        </div>
-        <div class="nav-bar-elements nav-bar-elements-last">
-          <a href="/">Venues</a>
+        <div class="nav-boxes">
+          <div class="nav-bar-elements nav-bar-elements-one">
+            <a href="index.html">Home</a>
+          </div>
+          <div class="nav-bar-elements nav-bar-elements-two">
+            <a href="about.html">About</a>
+          </div>
+          <div class="nav-bar-elements nav-bar-elements-three">
+            <a href="base.html">History</a>
+          </div>
+          <div class="nav-bar-elements nav-bar-elements-four">
+            <a href="base.html">Instruments</a>
+          </div>
+          <div class="nav-bar-elements nav-bar-elements-five">
+            <a href="base.html">The Music</a>
+          </div>
+          <div class="nav-bar-elements nav-bar-elements-last">
+            <a href="base.html">Venues</a>
+          </div>
         </div>
       </nav>
     </div>
@@ -59,6 +67,12 @@
         </div>
       </div>
 
+      <div class="the-video">
+        <video class="home-video" width="450" height="auto" controls>
+          <source src="Just-Another-Dog.mp4" type="video/mp4">
+        </video>
+      </div>
+
 
 
 
@@ -70,7 +84,21 @@
 
 </body>
 
+
+
+
+
+
+
+
 <style>
+
+  body {
+    margin: 0;
+    background-color: #FFFCE7;
+    height: 100vh;
+  }
+
   .header-container {
     display: flex; 
     flex-direction: row;
@@ -104,6 +132,12 @@
 
   }
 
+  .site-title {
+    font-family: "Enriqueta", serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+
   .violin-neck {
     height: 175px;
     width: 85px;
@@ -115,15 +149,14 @@
 
   }
 
-  .search-bar {
-  
-}
-
 .nav-bar {
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: sticky;
+  z-index: 99;
+  top: 0;
+  background-color: #FFFCE7;
 }
 
 .main-nav-bar {
@@ -133,24 +166,35 @@
   position: relative;
 }
 
+.nav-boxes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  border-right: 1px solid;
+  border-left: 1px solid;
+  border-color:#867E8A;
+}
+
 .nav-bar-elements {
-  border-top: 7px;
-  border-left: 14px;
-  border-right: 14px;
-  border-bottom: 7px;
+  border-style: solid;
   border-color: #867E8A;
-  border: solid;
-  width: 80px;
+  width: 95px;
   height: 25px;
   text-align:justify; 
   text-align: center;
   position: sticky;
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .nav-bar-elements-one {
   border-left: 21px;
   border: solid;
   border-color:#867E8A;
+
 }
 
 .nav-bar-elements-last {
@@ -162,11 +206,13 @@
 .main-body {
   background-color: #02588D;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
-  position: relative;
-  height: 750px;
   width: auto;
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+
 
 }
 
@@ -174,11 +220,12 @@
   position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .low-road-container {
-    width: 300px;
+    width: 250px;
     height: 150px;
     background-color: #FFFCE7;
     display: flex;
@@ -192,6 +239,7 @@
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+  font-size: x-large;
 
 }
 
@@ -202,7 +250,7 @@
 
 }
 .projects-nav-container {
-  width: 300px;
+  width: 250px;
   height: 150px;
   background-color:#FFFCE7;
   display: flex;
@@ -216,6 +264,7 @@
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+  font-size: x-large;
 }
 
 .notable-projects-nav {
@@ -224,7 +273,104 @@
   transform: translateY(-50%)
 }
 
+.the-video {
+  position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 
+.home-video {
+  position: relative;
+  display: flex;
+}
+
+
+p {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+
+
+
+
+
+.pt-serif-regular {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pt-serif-bold {
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.pt-serif-regular-italic {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.pt-serif-bold-italic {
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.enriqueta-regular {
+  font-family: "Enriqueta", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.enriqueta-medium {
+  font-family: "Enriqueta", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.enriqueta-semibold {
+  font-family: "Enriqueta", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.enriqueta-bold {
+  font-family: "Enriqueta", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+@media (min-width: 590px) {
+  .main-body {
+    height: calc(100% - 175px - 28px);
+  }
+}
+
+@media (max-width: 450px) {
+  .home-video {
+    width: 250px;
+    height: auto;
+  }
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
+  .site-title {
+    font-size: 1.5rem;
+  }
+  .title-content {
+    width: 250px;
+    height: auto;
+  }
+}
 
 </style>
 
